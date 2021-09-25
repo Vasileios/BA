@@ -39,8 +39,8 @@ BASynthBeat{
 Ndef.all.clear;
 server.waitForBoot{
 	// setup sample paths and \bf synth
-	//~percpath = "/Users/vasilis/Documents/Projects/ProJects_Albums/SC/sounds_drums/drums/"; // drums
-	~percpath = Platform.userExtensionDir +/+ "BASynths/sounds/sounds_drums/drums/";
+
+	~percpath = Platform.userExtensionDir +/+ "BA/sounds/sounds_drums/drums/";
 	~bufs = (~percpath ++ "*.wav").pathMatch.collect({ |i|  Buffer.read(server, i)});
 
 	~bufs.postln;
