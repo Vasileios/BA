@@ -40,7 +40,7 @@ Ndef.all.clear;
 server.waitForBoot{
 	// setup sample paths and \bf synth
 
-	~percpath = Platform.userExtensionDir +/+ "BA/sounds/sounds_drums/drums/";
+	~percpath = Platform.userExtensionDir +/+ "BA/sound/sounds_drums/drums/";
 	~bufs = (~percpath ++ "*.wav").pathMatch.collect({ |i|  Buffer.read(server, i)});
 
 	~bufs.postln;
