@@ -1,3 +1,4 @@
+//Vasilis Agiomyrgianakis BA classes SC 150811 cc
 BANastySynth {
 	classvar <>wackiness=200;
 	

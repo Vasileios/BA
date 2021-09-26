@@ -29,18 +29,18 @@ BANastyPad{
 		
 	//SynthDef
 		
-SynthDef(\nastyS, {|wacky = 0.5, carrfeq = 100, modfreq = 0.4, amp = 0.1, pan = 0, shape = 0.1|
+SynthDef(\nastyS, {|wacky = 0.5, carfreq = 100, modfreq = 0.4, amp = 0.1, pan = 0, shape = 0.1|
 	var env, source;
 
 	env = EnvGen.kr(Env([0, 1, 0], [shape, shape]), 1, doneAction: 2);
-	source = BANastySynth.ar(wacky, carrfeq, modfreq, amp);
+	source = BANastySynth.ar(wacky, carfreq, modfreq, amp);
 	Out.ar(0, Pan2.ar(source*env, pan))
 }).add;
 		
 		name = n;
 
 
-		"Pbindef(\\nasty,\\wacky, \\carrfeq, 
+		"Pbindef(\\nasty,\\wacky, \\carfreq, 
 \\modfreq, \\amp)".postln
 		
 	}
@@ -66,7 +66,7 @@ fork{
 	0.1.wait;
 Pdef(\nasty, Pbind(\instrument, \nastyS,
 	\wacky, Pseq([0.01, 0.002, 0.3, 0.004, 1, 3], inf),
-	\carrfeq, Pseq([10, 2200, 300, 7000, 4000], inf),
+	\carfreq, Pseq([10, 2200, 300, 7000, 4000], inf),
 	\modfreq, Pseq([0.01, 0.02, 0.005, 0.74, 0.02], inf),
 	\pan, Pseq([-1, 0, 1, 0.1, 0.7, 0.3, 0.5], inf),
 	\amp,0.0// Pseq([0.1, 0.04, 0.02, 0.03], inf)
