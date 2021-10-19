@@ -26,6 +26,7 @@ BASelect.instrument(Pbindef(\pad, \freq, 440, \amp, 0.6).play);
 //use filters
 BASelect.filter(\pad).put(1, \filter->{|in| Resonz.ar(in, 2600, 1, 1)})
 BASelect.filter(\pad).put(2, \filter->{|in| GVerb.ar(in, 10, 0.7, 0.6)})
+
 //remove filters
 BASelect.filter(\pad).put(1,nil)
 BASelect.filter(\pad).put(2,nil)
@@ -51,6 +52,7 @@ BASelect.instrument(Pbindef(\kick1, \freq, 660, \amp, 0.5, \dur, 0.5).play)
 //use filters
 BASelect.filter(\kick1).put(1, \filter->{|in| Resonz.ar(in, 2600,1,1)})
 BASelect.filter(\kick1).put(2, \filter->{|in| GVerb.ar(in, 10, 0.7, 0.6)})
+
 //remove filters
 BASelect.filter(\kick1).put(1,nil)
 BASelect.filter(\kick1).put(2,nil)
