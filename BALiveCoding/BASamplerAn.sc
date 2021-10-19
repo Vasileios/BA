@@ -32,14 +32,14 @@ BASamplerAn{
 
 			// setup sample paths and \bf synth
 
-		~samplespathSamp =  Platform.userExtensionDir +/+ "BASynths/sounds/";
+		~samplespathSamp =  Platform.userExtensionDir +/+ "BA/sounds/";
 	~bufferSampler = (~samplespathSamp ++ "*.wav").pathMatch.collect({ |i|  Buffer.read(server, i)});
 
 	~bufferSampler[2].postln;
 0.1.wait;
 		
  
-//~record = Server.local.prepareForRecord("granular01.aif");
+
 SynthDef(\phasorAn, {| bufnum, fact = 0.5, gate = 1, cutoff = 4440, rate = 1, freq = 200, trig = 1, start = 0.2, samplePos = 0, end = 1, pan = 0, vol = 0.5, amp = 0.1, lfamp = 0.5, envindur = 2, envoutdur = 2 |
 	
 	var env, trigger, phasor, rand;
