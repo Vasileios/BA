@@ -20,7 +20,7 @@ BASelect.list;
 //then choose an instrument from the list and play with patterns
 BASelect.instrument(Pbindef(\pad, \freq, 440, \amp, 0.6).play);
 
-//You can use BASelect like Pbindef
+//BASelect uses Pdef that registers patterns by key.
 //You can play, stop, pause and resume patterns
 
 //insert a filter to your synths
@@ -42,7 +42,7 @@ BADrumKit();
 BASelect.list;
 //then choose an instrument from the list and play with patterns
 BASelect.instrument(Pbindef(\kick1, \freq, 660, \amp, 0.5, \dur, 0.5).play)
-//You can use BASelect like Pbindef
+//BASelect uses Pdef that registers patterns by key.
 //You can play, stop, pause and resume patterns
 //insert a filter to your synths
 BASelect.filter(\kick1).put(1, \filter->{|in| Resonz.ar(in, 2600,1,1)})
