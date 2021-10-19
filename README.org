@@ -17,7 +17,7 @@ BASynthGens()
 
 BASelect.list;
 
-//then choose an instrument from list and play with patterns
+//then choose an instrument from the list and play with patterns
 BASelect.instrument(Pbindef(\pad, \freq, 440, \amp, 0.6).play);
 
 //You can use BASelect like Pbindef
@@ -40,7 +40,7 @@ BADrumKit();
 //Use BASelect.list to see the list of the default instruments
 
 BASelect.list;
-//then choose an instrument from list and play with patterns
+//then choose an instrument from the list and play with patterns
 BASelect.instrument(Pbindef(\kick1, \freq, 660, \amp, 0.5, \dur, 0.5).play)
 //You can use BASelect like Pbindef
 //You can play, stop, pause and resume patterns
