@@ -25,18 +25,7 @@ KickI {
 
 ~kick1 =  Pbindef(\kick1).fadeTime_(1);
 		~f = fork{
-			/*
-			~t = TempoClock(1); // create a TempoClock
-
-// schedule an event at next whole beat
-~t.schedAbs(~t.beats.ceil, { arg beat, sec; [beat, sec]; 1 });
-
-			~t.tempo = 1;
-
-			~t.tempo.postln;
-			"~t->t.tempo = 1".postln;
-
-*/
+			
 			~metronomos = TempoClock(1); // create a TempoClock
 
 // schedule an event at next whole beat
@@ -45,25 +34,18 @@ KickI {
 			~metronomos.tempo = 1;
 
 			~metronomos.tempo.postln;
-			"~metronomos->t.tempo = 1".postln;
-/*metronomos = TempoClock(1);
-			metronomos.schedAbs(metronomos.beats.ceil, { arg beat, sec; [beat, sec]; 1 });
+			"~metronomos->~metronomos.tempo = 1".postln;
 
-			metronomos.tempo = 1;
-
-			metronomos.tempo.postln;
-			"metronomos->t.tempo = 1".postln;
-*/
 			~kick1 = Pbindef(\kick1, \buf, ~bufs[0]);
 0.1.wait;
 
 			~kick1 =Pbindef(\kick1, \freq, 120, \dur, Pseq([0.5, 0.5, 0.5, 0.5], inf), \amp, 0.0000001,/* Prand([0.4, 0.3, 0.5, 0.36], inf),*/ \char, "kick_char".postln);//.play(metronomos, quant: 4);
 
-		//~t = TempoClock(4/4);
+		
 
 			0.5.wait;
 
-			//~kick1 = Pbindef(\kick1, \instrument, \bf, \out, ~mbus1).play(~t, quant: 4);
+			
 			~kick1 = Pbindef(\kick1, \instrument, \bf, \out, ~mbus1).play(~metronomos, quant: 4);
 
 
