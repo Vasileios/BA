@@ -1,4 +1,8 @@
-#+TITLE: BA classes for SuperCollider
+#+TITLE: BA classes for SuperCollider - older version
+
+*Deprecated*
+
+Clone new version here: https://github.com/Vasileios/BALC-lib
 
 * About
 BA classes are classes for Musical Live coding
