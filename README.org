@@ -57,5 +57,5 @@ BASelect.filter(\kick1).put(2, \filter->{|in| GVerb.ar(in, 10, 0.7, 0.6)})
 BASelect.filter(\kick1).put(1,nil)
 BASelect.filter(\kick1).put(2,nil)
 #+end_src>
-
-*Have fun!*
+* End
+** Have fun!*
